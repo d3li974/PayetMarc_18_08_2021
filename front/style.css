@@ -49,11 +49,16 @@ body{
       justify-items: center;
       gap: 10px;
   }
+  h1{
+    font-size: 35px;
+  }
   h2{
       margin-left: 10px;
+      font-size: 35px;
   }
   h3{
       text-align: center;
+      font-size: 30px;
   }
   #oriOurs, #oriCamera, #oriMeuble{
       border: blueviolet 2px solid;
@@ -77,10 +82,36 @@ body{
     list-style: none;
     font-size: 20px;
   }
-
-
-
-
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.CardTeddy{
+    display: flex;
+    flex-direction: column;
+    background-color: coral;
+    justify-content: center;
+}
+.imgTeddy{
+    object-fit: fill;
+    width: 100%;
+    max-height: 400px; 
+}
+.CardBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.CardPrice {
+    text-align: center;
+    margin: 50px 20px;
+    font-size: 22px;
+    
+}
+.CardDescription{
+    text-align: center;
+    
+}
 
 
   @media screen and (min-width: 800px) {
