@@ -7,22 +7,20 @@ fetch(UrlTeddies)
     /* on passe la data de l'api en json */
     .then( data => data.json())
     .then(jsonListteddies =>{
-        /* on recupere les donnés dans la cosole pour cerifier qu'on l'a bien recupéré */
-        console.log(jsonListteddies);
         /* on boucle avec for pour recuperer les iterations dans l'api */
         for(let jsonteddies of jsonListteddies){
             let teddies = new Teddies(jsonteddies);
             /* on cré notre html a partir de container qui est deja créé dans l'html et on lui injecte les produits */
-            document.querySelector('.container').innerHTML += `     
-                <a href= "${teddies._id}">
+            document.querySelector('#container').innerHTML += `     
+                <a href="Produit.html?id=${teddies._id}">
                     <div class="CardTeddy">
-                        <h3>${teddies.name}</h3>
+                        <h3 id="teddy__Title">${teddies.name}</h3>
                         <div class="CardHeader">
-                            <img src="${teddies.imageUrl}" alt="" class="imgTeddy">
+                            <img src="${teddies.imageUrl}" alt="" id="teddy__img">
                         </div>
                         <div class="CardBody">
-                            <p class="CardDescription">${teddies.description}</p>
-                            <p class="CardPrice">${(teddies.price / 100)}€</p>
+                            <p id="teddy__Description">${teddies.description}</p>
+                            <p id="teddy__Price">${(teddies.price / 100)}€</p>
                         </div>
                     </div>
                 </a>`;
