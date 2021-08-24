@@ -24,7 +24,7 @@ function hydrateTeddy(teddy){
   cloneElt.getElementById("teddy__img").src = teddy.imageUrl
   cloneElt.getElementById("teddy__Description").textContent = teddy.description
   cloneElt.getElementById("teddy__Price").textContent = teddy.price +="€"
-  
+  cloneElt.getElementById("teddy__color").textContent += `${teddy.colors}`
   console.log(teddy.colors)
   
   document.getElementById("main").appendChild(cloneElt)
