@@ -86,17 +86,25 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    justify-content: center; 
+    width: 100%;
+    
 }
 .CardTeddy{
     display: flex;
     flex-direction: column;
     background-color: coral;
     justify-content: center;
+    border: blueviolet 2px solid;
+    border-radius: 15px;
+    width: 90%;
+    margin-left: 5%;
 }
 .imgTeddy{
     object-fit: fill;
     width: 100%;
     max-height: 400px; 
+    justify-self: center;
 }
 .CardBody{
     display: grid;
@@ -109,12 +117,18 @@ body{
     
 }
 .CardDescription{
-    text-align: center;
-    
+    text-align: center; 
+}
+.CardDescription{
+    margin-top: 10%;
 }
 
-
-  @media screen and (min-width: 800px) {
+@media screen and (min-width: 550px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 800px) {
     .logo{
         max-height: 120px;
         max-width: 300px;
